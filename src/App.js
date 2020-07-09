@@ -5,38 +5,42 @@ import NumberFormat from "react-number-format";
 import "./App.css";
 import MenuIcon from "@material-ui/icons/Menu";
 import {
-  Button,
-  Icon,
-  makeStyles,
-  Grid,
-  IconButton,
-  AppBar,
-  Toolbar,
-  Typography,
-  paper,
+    Button,
+    Icon,
+    makeStyles,
+    Grid,
+    IconButton,
+    AppBar,
+    Toolbar,
+    Typography,
+    paper,
 } from "@material-ui/core";
 import NavBar from "./components/NavBar";
 import InfoPanel from "./components/InfoPanel";
 import CountryPanel from "./components/CountryPanel";
+import CountryPanel2 from "./components/CountryPanel2";
 
 
 function App() {
 
-  var countryCode = window.prompt("Enter Country Code");
+    var countryCode = window.prompt("Enter Country Code");
 
-  console.log(countryCode, "countrycode input in APP.JS");
+    console.log(countryCode, "countrycode input in APP.JS");
 
   return (
-    <div className="App">
-      <NavBar />
-      {countryCode === "gl" ? (
-        <InfoPanel />
-      ) : (
-        <CountryPanel countryCode={countryCode} />
-        )}
-      
-    </div>
-  );
+    <div className = "App" >
+        <
+        NavBar / > {
+            countryCode === "gl" ? ( <
+                InfoPanel / >
+            ) : ( <
+                CountryPanel2 countryCode = { countryCode }
+                />
+            )
+        }
+
+        </div>
+    );
 }
 
 export default App;
